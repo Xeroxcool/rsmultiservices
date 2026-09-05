@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="R&S Multiservices — copias, impresiones, fotos, laminados, tarjetas y documentos profesionales en Smyrna, Tennessee.">
+<meta name="theme-color" content="#b51772">
+<title>R&S Multiservices | Copias, Impresiones y Documentos</title>
+<style>
+:root{--pink:#b51772;--pink2:#e52a8b;--teal:#168e98;--teal2:#56c9cf;--ink:#17141a;--muted:#6c6670;--bg:#fffafd;--card:#fff;--line:#ece6eb;--soft:#f8eef5;--dark:#17131a;--shadow:0 18px 55px rgba(44,12,36,.11);--r:24px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--dark);color:#fff;font-size:.88rem}.topbar .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0}.topbar a{color:#fff}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(15px);border-bottom:1px solid rgba(0,0,0,.06)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:950;font-size:1.55rem;letter-spacing:-1px;color:var(--pink)}.brand span{color:var(--teal)}
+.links{display:flex;align-items:center;gap:18px;font-weight:750;font-size:.92rem}.links a:hover{color:var(--pink)}.navbtn{background:var(--pink);color:#fff!important;padding:10px 16px;border-radius:999px}
+.lang{display:flex;align-items:center;background:#f4edf2;border:1px solid var(--line);padding:3px;border-radius:999px;gap:2px}.lang button{border:0;background:transparent;cursor:pointer;font-weight:900;font-size:.78rem;padding:7px 10px;border-radius:999px;color:var(--muted)}.lang button.active{background:#fff;color:var(--pink);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.hero{position:relative;overflow:hidden;padding:74px 0 70px;background:radial-gradient(circle at 0% 20%,rgba(22,142,152,.18),transparent 32%),radial-gradient(circle at 95% 10%,rgba(229,42,139,.16),transparent 34%)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.kicker{color:var(--pink);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:.82rem}h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:.98;letter-spacing:-4px;margin:13px 0 20px}h1 .pink{color:var(--pink)}.hero-copy{font-size:1.15rem;color:var(--muted);max-width:610px;margin-bottom:28px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 21px;border-radius:999px;font-weight:850;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--pink);color:#fff;box-shadow:0 12px 28px rgba(181,23,114,.22)}.secondary{background:#fff;border:1px solid var(--line)}.hero-img{width:100%;display:block;border-radius:var(--r);box-shadow:var(--shadow);cursor:pointer}
+.trust{padding:18px 0;background:#fff;border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}.trust-item{font-size:.93rem;font-weight:800}.trust-item span{display:block;color:var(--muted);font-size:.8rem;font-weight:500}section{padding:86px 0}.head{text-align:center;max-width:760px;margin:0 auto 44px}.head .kicker{display:block;margin-bottom:7px}.head h2{font-size:clamp(2rem,4vw,3.15rem);letter-spacing:-1.8px;line-height:1.08}.head p{color:var(--muted);margin-top:12px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 8px 30px rgba(20,5,15,.04);transition:.22s}.service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.ico{width:54px;height:54px;border-radius:16px;background:var(--soft);display:grid;place-items:center;font-size:1.55rem;margin-bottom:18px}.service h3{font-size:1.2rem;margin-bottom:7px}.service p{color:var(--muted);font-size:.94rem}.service .tag{display:inline-block;margin-top:15px;font-size:.76rem;font-weight:850;color:var(--pink);background:#fff0f8;padding:6px 10px;border-radius:99px}
+.band{background:var(--dark);color:#fff}.band-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.band h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;margin-bottom:15px;letter-spacing:-1.5px}.band p{color:#d6cfd6;margin-bottom:25px}.points{display:grid;grid-template-columns:1fr 1fr;gap:13px}.point{border:1px solid #39323b;background:#241f26;padding:18px;border-radius:18px}.point b{display:block}.point span{font-size:.86rem;color:#c6bec7}
+.quote{background:linear-gradient(135deg,#fff 0,#f9edf5 50%,#e7f7f8 100%)}.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:start}.info-card,.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:var(--shadow)}.info-card h3,.form-card h3{font-size:1.5rem;margin-bottom:8px}.info-card p{color:var(--muted);margin-bottom:20px}.contact-row{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}.contact-row .ci{width:31px;font-size:1.25rem}.contact-row small{display:block;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-weight:800;font-size:.84rem}label.full{grid-column:1/-1}input,select,textarea{width:100%;margin-top:6px;border:1px solid #ddd5dd;border-radius:13px;padding:12px 13px;background:#fff;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(181,23,114,.09)}textarea{min-height:110px;resize:vertical}.form-note{font-size:.78rem;color:var(--muted);margin-top:10px}
+.calc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:27px;box-shadow:0 10px 35px rgba(20,5,15,.05)}.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.calc small{display:block;color:var(--muted);margin-top:8px}.total{margin-top:20px;padding:17px;border-radius:16px;background:var(--soft);display:flex;justify-content:space-between;align-items:center;font-weight:850}.total strong{font-size:1.45rem;color:var(--pink)}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}.gallery-card{position:relative;overflow:hidden;border-radius:var(--r);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;min-height:220px}.gallery-card.big{min-height:460px}.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.gallery-card:hover img{transform:scale(1.035)}.gallery-label{position:absolute;left:15px;bottom:15px;background:rgba(23,19,26,.82);color:#fff;padding:9px 13px;border-radius:999px;font-weight:800;font-size:.8rem}.gallery .side{display:grid;gap:18px}
+.faq{display:grid;gap:12px;max-width:850px;margin:auto}details{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px 20px}summary{font-weight:850;cursor:pointer}details p{color:var(--muted);padding-top:10px}.cta{background:linear-gradient(110deg,var(--pink),#8f155f);color:#fff;text-align:center}.cta h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-1.5px}.cta p{color:#ffe6f3;max-width:650px;margin:10px auto 24px}footer{background:#100d12;color:#bcb5bd;padding:40px 0 25px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px;padding-bottom:28px}footer h3{color:#fff;margin-bottom:10px}footer p{font-size:.9rem}footer a:hover{color:#fff}.copy{text-align:center;border-top:1px solid #2c262e;padding-top:20px;font-size:.8rem}.float-wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#20b85a;color:#fff;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 14px 35px rgba(0,0,0,.22)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.86);z-index:100;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modal img{max-width:min(1100px,94vw);max-height:88vh;border-radius:18px;box-shadow:0 20px 70px rgba(0,0,0,.45)}.modal-close{position:absolute;right:22px;top:18px;color:#fff;background:rgba(255,255,255,.14);border:0;width:44px;height:44px;border-radius:50%;font-size:1.6rem;cursor:pointer}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#17131a;color:#fff;padding:12px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:120}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.links a:not(.navbtn){display:none}.hero-grid,.band-grid,.quote-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.trust-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery .side{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.links{gap:8px}}
+@media(max-width:560px){.topbar .container{justify-content:center}.topbar span{display:none}.nav{min-height:68px}.brand{font-size:1.25rem}.services,.points,.form-grid,.calc-grid,.trust-grid{grid-template-columns:1fr}section{padding:62px 0}h1{letter-spacing:-2.5px}.actions{display:grid}.btn{width:100%}.gallery .side,.footer-grid{grid-template-columns:1fr}.float-wa{right:12px;bottom:12px}.links{gap:5px}.navbtn{padding:9px 11px;font-size:.8rem}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span data-es="R&S Multiservices · Copias, Impresiones y Documentos Profesionales" data-en="R&S Multiservices · Copies, Printing & Professional Documents"></span><a href="tel:+16159192574">📞 (615) 919-2574</a></div></div>
+<header><div class="container nav"><a class="brand" href="#inicio">R&S <span>Multiservices</span></a><nav class="links"><a href="#servicios" data-es="Servicios" data-en="Services"></a><a href="#nosotros" data-es="Nosotros" data-en="About Us"></a><a href="#cotizacion" data-es="Cotización" data-en="Quote"></a><a href="#galeria" data-es="Nuestra presentación" data-en="Our Showcase"></a><a href="#faq" data-es="FAQ" data-en="FAQ"></a><a class="navbtn" href="https://wa.me/16159192574" target="_blank" rel="noopener">WhatsApp</a><div class="lang" aria-label="Language selector"><button id="esBtn" class="active" type="button">ES</button><button id="enBtn" type="button">EN</button></div></nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="container hero-grid"><div><div class="kicker" data-es="Copias e impresiones profesionales" data-en="Professional Copies & Printing"></div><h1><span data-es="Tu idea." data-en="Your idea."></span><br><span class="pink" data-es="Nosotros la imprimimos." data-en="We print it."></span></h1><p class="hero-copy" data-es="Copias, impresiones, fotos, laminados, tarjetas, documentos y más, con una presentación profesional y atención personalizada." data-en="Copies, printing, photos, lamination, business cards, documents and more, with professional presentation and personalized service."></p><div class="actions"><a class="btn primary" href="https://wa.me/16159192574?text=Hola%20R%26S%20Multiservices%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" data-es="💬 Pedir cotización" data-en="💬 Request a quote"></a><a class="btn secondary" href="#servicios" data-es="Ver servicios ↓" data-en="View services ↓"></a></div></div><img class="hero-img lightbox-img" src="banner-rs-multiservices.jpg" alt="R&S Multiservices"></div></section>
+<div class="trust"><div class="container trust-grid"><div class="trust-item" data-es="✓ Calidad profesional" data-en="✓ Professional quality"><span data-es="Acabados cuidados" data-en="Careful finishing"></span></div><div class="trust-item" data-es="⚡ Entrega rápida" data-en="⚡ Fast turnaround"><span data-es="Procesos eficientes" data-en="Efficient processes"></span></div><div class="trust-item" data-es="💬 Atención personalizada" data-en="💬 Personalized service"><span data-es="Te orientamos" data-en="We guide you"></span></div><div class="trust-item" data-es="★ Hecho con cuidado" data-en="★ Made with care"><span data-es="Atención al detalle" data-en="Attention to detail"></span></div></div></div>
+<section id="servicios"><div class="container"><div class="head"><span class="kicker" data-es="Lo que hacemos" data-en="What we do"></span><h2 data-es="Servicios para tu día a día y tus momentos especiales" data-en="Services for everyday needs and special moments"></h2><p data-es="Una solución práctica para convertir tus archivos y recuerdos en productos impresos." data-en="A practical solution for turning your files and memories into printed products."></p></div><div class="services">
+<article class="service"><div class="ico">📸</div><h3 data-es="Impresión de fotos" data-en="Photo printing"></h3><p data-es="Imprime tus recuerdos en tamaños populares y con una presentación de calidad." data-en="Print your memories in popular sizes with quality presentation."></p><span class="tag" data-es="4×6 · 5×7 · 8×10 · 8.5×11" data-en="4×6 · 5×7 · 8×10 · 8.5×11"></span></article>
+<article class="service"><div class="ico">📄</div><h3 data-es="Copias e impresiones" data-en="Copies & printing"></h3><p data-es="Copias nítidas y rápidas para documentos personales, escolares y de trabajo en tamaño Carta y Legal." data-en="Fast, sharp copies for personal, school and work documents in Letter and Legal sizes."></p><span class="tag" data-es="Descuentos por volumen" data-en="Volume discounts"></span></article>
+<article class="service"><div class="ico">🛡️</div><h3 data-es="Laminados" data-en="Lamination"></h3><p data-es="Protege tus documentos y materiales con laminados duraderos." data-en="Protect your documents and materials with durable lamination."></p><span class="tag" data-es="Acabado protector" data-en="Protective finish"></span></article>
+<article class="service"><div class="ico">📚</div><h3 data-es="Encuadernación" data-en="Binding"></h3><p data-es="Encuadernación para proyectos, manuales y documentos." data-en="Binding for projects, manuals and documents."></p><span class="tag" data-es="Espiral · Térmica" data-en="Spiral · Thermal"></span></article>
+<article class="service"><div class="ico">🎴</div><h3 data-es="Tarjetas y Flyers" data-en="Business Cards & Flyers"></h3><p data-es="Impresión de tarjetas de presentación y volantes publicitarios." data-en="Business cards and promotional flyers printing."></p><span class="tag" data-es="Tarjetas · Flyers" data-en="Cards · Flyers"></span></article>
+<article class="service"><div class="ico">✏️</div><h3 data-es="Escaneo y preparación" data-en="Scanning & file preparation"></h3><p data-es="Escaneo a email y preparación de archivos para impresión." data-en="Scan to email and prepare files for printing."></p><span class="tag" data-es="Digitalización" data-en="Digitization"></span></article>
+</div></div></section>
+<section class="band" id="nosotros"><div class="container band-grid"><div><div class="kicker" style="color:#66d7df" data-es="¿Por qué R&S?" data-en="Why R&S?"></div><h2 data-es="Calidad profesional con atención al detalle." data-en="Professional quality with attention to detail."></h2><p data-es="Queremos que cada pedido se vea bien, esté listo a tiempo y sea sencillo de solicitar. Escríbenos por WhatsApp y cuéntanos qué necesitas." data-en="We want every order to look great, be ready on time, and be easy to request. Message us on WhatsApp and tell us what you need."></p><a class="btn primary" href="https://wa.me/16159192574" target="_blank" rel="noopener" data-es="Hablar con R&S" data-en="Talk to R&S"></a></div><div class="points"><div class="point"><b data-es="✓ Calidad profesional" data-en="✓ Professional quality"></b><span data-es="Acabados cuidados y presentación profesional." data-en="Careful finishing and professional presentation."></span></div><div class="point"><b data-es="⚡ Entrega rápida" data-en="⚡ Fast turnaround"></b><span data-es="Procesos eficientes para ayudarte a tiempo." data-en="Efficient processes to help you on time."></span></div><div class="point"><b data-es="🎨 Atención al detalle" data-en="🎨 Attention to detail"></b><span data-es="Revisamos cada pedido con cuidado." data-en="We review every order carefully."></span></div><div class="point"><b data-es="💗 Trato personalizado" data-en="💗 Personalized service"></b><span data-es="Te ayudamos a elegir la mejor opción." data-en="We help you choose the best option."></span></div></div></div></section>
+<section id="cotizacion" class="quote"><div class="container"><div class="head"><span class="kicker" data-es="Cotiza fácilmente" data-en="Easy quoting"></span><h2 data-es="Cuéntanos qué necesitas" data-en="Tell us what you need"></h2><p data-es="Completa el formulario y se abrirá WhatsApp con tu solicitud lista para enviar." data-en="Complete the form and WhatsApp will open with your request ready to send."></p></div><div class="quote-grid"><div class="info-card"><h3 data-es="📲 Atención directa" data-en="📲 Direct contact"></h3><p data-es="Para precios exactos, cantidades especiales o trabajos personalizados, escríbenos." data-en="For exact prices, special quantities or custom work, message us."></p><div class="contact-row"><div class="ci">📱</div><div><b data-es="WhatsApp / Teléfono" data-en="WhatsApp / Phone"></b><small><a href="tel:+16159192574">(615) 919-2574</a></small></div></div><div class="contact-row"><div class="ci">✉️</div><div><b>Email</b><small><a href="mailto:yuarkir@gmail.com">yuarkir@gmail.com</a></small></div></div><div class="contact-row"><div class="ci">📘</div><div><b>Facebook</b><small>R&S Multiservices</small></div></div><p style="margin-top:20px;font-size:.83rem">📍 Smyrna, Tennessee</p></div><div class="form-card"><h3 data-es="Solicitar cotización" data-en="Request a quote"></h3><form id="quoteForm"><div class="form-grid"><label data-es="Nombre" data-en="Name"> <input id="name" required data-placeholder-es="Tu nombre" data-placeholder-en="Your name"></label><label data-es="Teléfono" data-en="Phone"> <input id="phone" data-placeholder-es="Tu teléfono" data-placeholder-en="Your phone"></label><label data-es="Servicio" data-en="Service"> <select id="service"><option value="photos" data-es="Impresión de fotos" data-en="Photo printing"></option><option value="copies" data-es="Copias e impresiones" data-en="Copies & printing"></option><option value="lamination" data-es="Laminado" data-en="Lamination"></option><option value="binding" data-es="Encuadernación" data-en="Binding"></option><option value="cards" data-es="Tarjetas y Flyers" data-en="Business Cards & Flyers"></option><option value="scan" data-es="Escaneo / Preparación" data-en="Scanning / File preparation"></option><option value="other" data-es="Otro" data-en="Other"></option></select></label><label data-es="Cantidad" data-en="Quantity"> <input id="qty" type="number" min="1" data-placeholder-es="Ej. 20" data-placeholder-en="e.g. 20"></label><label class="full" data-es="Detalles" data-en="Details"> <textarea id="details" data-placeholder-es="Tamaño, color/blanco y negro, tipo de papel, fecha que lo necesitas, etc." data-placeholder-en="Size, color/black & white, paper type, date needed, etc."></textarea></label></div><button class="btn primary" style="margin-top:15px;width:100%" type="submit" data-es="💬 Enviar solicitud por WhatsApp" data-en="💬 Send request via WhatsApp"></button><div class="form-note" data-es="No se envía automáticamente ningún archivo. Si necesitas imprimir un archivo, podrás enviarlo por WhatsApp después." data-en="No file is sent automatically. If you need to print a file, you can send it through WhatsApp afterward."></div></form></div></div></div></section>
+
+
+<!--<section id="calculadora"><div class="container"><div class="head"><span class="kicker" data-es="Calculadora orientativa" data-en="Estimate calculator"></span><h2 data-es="Calcula una idea de tu pedido" data-en="Estimate your order"></h2><p data-es="Estos valores son de referencia. Confirma el precio final según el detalle de tu trabajo con R&S Multiservices." data-en="These are reference prices. Confirm the final price based on your job details with R&S Multiservices."></p></div><div class="calc"><div class="calc-grid"><label data-es="Servicio / Producto" data-en="Service / Product"><select id="calcType"><optgroup data-es-label="Documentos Carta (B/N)" data-en-label="Letter Documents (B/W)"><option value="doc_bn_carta" data-es="B/N Carta — $0.20 (1–20) · $0.17 (21–100) · $0.12–$0.15 (101+)" data-en="B/W Letter — $0.20 (1–20) · $0.17 (21–100) · $0.12–$0.15 (101+)"></option></optgroup><optgroup data-es-label="Documentos Carta (Color)" data-en-label="Letter Documents (Color)"><option value="doc_col_carta" data-es="Color Carta — $0.65 (1–20) · $0.50 (21–100) · $0.40 (101+)" data-en="Color Letter — $0.65 (1–20) · $0.50 (21–100) · $0.40 (101+)"></option></optgroup><optgroup data-es-label="Documentos Legal" data-en-label="Legal Documents"><option value="doc_bn_legal" data-es="Legal B/N — $0.25 c/u" data-en="Legal B/W — $0.25 each"></option><option value="doc_col_legal" data-es="Legal Color — $0.75 c/u" data-en="Legal Color — $0.75 each"></option><option value="doc_bn_legal_2s" data-es="Legal B/N Doble Cara — $0.30 c/u" data-en="Legal B/W Double-Sided — $0.30 each"></option><option value="doc_col_legal_2s" data-es="Legal Color Doble Cara — $0.90 c/u" data-en="Legal Color Double-Sided — $0.90 each"></option></optgroup><optgroup data-es-label="Fotos" data-en-label="Photos"><option value="photo_4x6" data-es="Foto 4×6 — $0.75 c/u" data-en="4×6 Photo — $0.75 each"></option><option value="photo_5x7" data-es="Foto 5×7 — $1.50 c/u" data-en="5×7 Photo — $1.50 each"></option><option value="photo_8x10" data-es="Foto 8×10 — $3.00 c/u" data-en="8×10 Photo — $3.00 each"></option><option value="photo_85x11" data-es="Foto 8.5×11 — $4.00 c/u" data-en="8.5×11 Photo — $4.00 each"></option><option value="photo_pass_2" data-es="Foto Pasaporte (2) — $12.00" data-en="Passport Photos (2) — $12.00"></option><option value="photo_pass_4" data-es="Foto Pasaporte (4) — $18.00" data-en="Passport Photos (4) — $18.00"></option></optgroup><optgroup data-es-label="Laminado" data-en-label="Lamination"><option value="lam_4x6" data-es="Laminado 4×6 — $1.00 c/u" data-en="4×6 Lamination — $1.00 each"></option><option value="lam_5x7" data-es="Laminado 5×7 — $1.25 c/u" data-en="5×7 Lamination — $1.25 each"></option><option value="lam_carta" data-es="Laminado Carta — $1.50 c/u" data-en="Letter Lamination — $1.50 each"></option><option value="lam_legal" data-es="Laminado Legal — $2.00 c/u" data-en="Legal Lamination — $2.00 each"></option><option value="lam_11x17" data-es="Laminado 11×17 — $3.50 c/u" data-en="11×17 Lamination — $3.50 each"></option></optgroup><optgroup data-es-label="Escaneo" data-en-label="Scanning"><option value="scan_doc" data-es="Escaneo de documento — $0.50 c/u" data-en="Document scanning — $0.50 each"></option><option value="scan_email" data-es="Escaneo + envío por email — $1.00 c/u" data-en="Scanning + email delivery — $1.00 each"></option></optgroup><optgroup data-es-label="Impresión Comercial" data-en-label="Commercial Printing"><option value="biz_cards" data-es="Tarjetas de Presentación (100) — $20.00" data-en="Business Cards (100) — $20.00"></option><option value="flyers_50" data-es="Flyers (50) — $30.00" data-en="Flyers (50) — $30.00"></option><option value="flyers_100" data-es="Flyers (100) — $45.00" data-en="Flyers (100) — $45.00"></option></optgroup><optgroup data-es-label="Otros Servicios" data-en-label="Other Services"><option value="binding" data-es="Encuadernación — $5.50 c/u aprox." data-en="Binding — approx. $5.50 each"></option><option value="design" data-es="Diseño sencillo — $17.50 aprox." data-en="Simple design — approx. $17.50"></option><option value="doc_pack" data-es="Paquete de documentos — $17.50 aprox." data-en="Document package — approx. $17.50"></option></optgroup></select></label><label data-es="Cantidad" data-en="Quantity"><input id="calcQty" type="number" min="1" value="1"></label></div><div class="total"><span data-es="Total estimado" data-en="Estimated total"></span><strong id="total">$0.20</strong></div><small data-es="* Para B/N Carta de 101+ páginas se usa $0.14 como valor orientativo; el precio real puede estar entre $0.12 y $0.15." data-en="* For 101+ B/W Letter pages, $0.14 is used as a reference; the actual price may range from $0.12 to $0.15."></small></div></div></section>-->
+
+
+<section>
+  <div class="container">
+
+    <div class="head">
+      <span class="kicker" data-es="Calculadora orientativa" data-en="Price Calculator">
+        Calculadora orientativa
+      </span>
+
+      <h2
+        data-es="Calcula una idea de tu pedido"
+        data-en="Estimate Your Order">
+        Calcula una idea de tu pedido
+      </h2>
+
+      <p
+        data-es="Estos valores son de referencia. Confirma el precio final según el detalle de tu trabajo con R&S Multiservices."
+        data-en="These prices are estimates. Please confirm the final price based on the details of your order with R&S Multiservices.">
+        Estos valores son de referencia. Confirma el precio final según el detalle de tu trabajo con R&S Multiservices.
+      </p>
+    </div>
+
+    <div class="calc">
+
+      <div class="calc-grid">
+
+        <label>
+          <span data-es="Servicio / Producto" data-en="Service / Product">
+            Servicio / Producto
+          </span>
+
+          <select id="calcType">
+
+            <!-- DOCUMENTOS CARTA B/N -->
+            <optgroup
+              label="Documentos Carta (B/N)"
+              data-es-label="Documentos Carta (B/N)"
+              data-en-label="Letter Size Documents (B/W)">
+
+              <option
+                value="doc_bn_carta"
+                data-es="B/N Carta (1–20 pág: $0.20 | 21–100: $0.17 | 101+: $0.14)"
+                data-en="B/W Letter (1–20 pages: $0.20 | 21–100: $0.17 | 101+: $0.14)">
+                B/N Carta (1–20 pág: $0.20 | 21–100: $0.17 | 101+: $0.14)
+              </option>
+
+            </optgroup>
+
+
+            <!-- DOCUMENTOS CARTA COLOR -->
+            <optgroup
+              label="Documentos Carta (Color)"
+              data-es-label="Documentos Carta (Color)"
+              data-en-label="Letter Size Documents (Color)">
+
+              <option
+                value="doc_col_carta"
+                data-es="Color Carta (1–20 pág: $0.65 | 21–100: $0.50 | 101+: $0.40)"
+                data-en="Color Letter (1–20 pages: $0.65 | 21–100: $0.50 | 101+: $0.40)">
+                Color Carta (1–20 pág: $0.65 | 21–100: $0.50 | 101+: $0.40)
+              </option>
+
+            </optgroup>
+
+
+            <!-- DOCUMENTOS LEGAL -->
+            <optgroup
+              label="Documentos Legal"
+              data-es-label="Documentos Legal"
+              data-en-label="Legal Size Documents">
+
+              <option
+                value="doc_bn_legal"
+                data-es="Legal B/N ($0.25 c/u)"
+                data-en="Legal B/W ($0.25 each)">
+                Legal B/N ($0.25 c/u)
+              </option>
+
+              <option
+                value="doc_col_legal"
+                data-es="Legal Color ($0.75 c/u)"
+                data-en="Legal Color ($0.75 each)">
+                Legal Color ($0.75 c/u)
+              </option>
+
+              <option
+                value="doc_bn_legal_2s"
+                data-es="Legal B/N Doble Cara ($0.30 c/u)"
+                data-en="Legal B/W Double-Sided ($0.30 each)">
+                Legal B/N Doble Cara ($0.30 c/u)
+              </option>
+
+              <option
+                value="doc_col_legal_2s"
+                data-es="Legal Color Doble Cara ($0.90 c/u)"
+                data-en="Legal Color Double-Sided ($0.90 each)">
+                Legal Color Doble Cara ($0.90 c/u)
+              </option>
+
+            </optgroup>
+
+
+            <!-- FOTOS -->
+            <optgroup
+              label="Fotos"
+              data-es-label="Fotos"
+              data-en-label="Photos">
+
+              <option
+                value="photo_4x6"
+                data-es="Foto 4×6 ($0.75 c/u)"
+                data-en="4×6 Photo ($0.75 each)">
+                Foto 4×6 ($0.75 c/u)
+              </option>
+
+              <option
+                value="photo_5x7"
+                data-es="Foto 5×7 ($1.50 c/u)"
+                data-en="5×7 Photo ($1.50 each)">
+                Foto 5×7 ($1.50 c/u)
+              </option>
+
+              <option
+                value="photo_8x10"
+                data-es="Foto 8×10 ($3.00 c/u)"
+                data-en="8×10 Photo ($3.00 each)">
+                Foto 8×10 ($3.00 c/u)
+              </option>
+
+              <option
+                value="photo_85x11"
+                data-es="Foto 8.5×11 ($4.00 c/u)"
+                data-en="8.5×11 Photo ($4.00 each)">
+                Foto 8.5×11 ($4.00 c/u)
+              </option>
+
+              <option
+                value="photo_pass_2"
+                data-es="Foto Pasaporte (Juego de 2) — $12.00"
+                data-en="Passport Photos (Set of 2) — $12.00">
+                Foto Pasaporte (Juego de 2) — $12.00
+              </option>
+
+              <option
+                value="photo_pass_4"
+                data-es="Foto Pasaporte (Juego de 4) — $18.00"
+                data-en="Passport Photos (Set of 4) — $18.00">
+                Foto Pasaporte (Juego de 4) — $18.00
+              </option>
+
+            </optgroup>
+
+
+            <!-- LAMINADO -->
+            <optgroup
+              label="Laminado"
+              data-es-label="Laminado"
+              data-en-label="Laminating">
+
+              <option
+                value="lam_4x6"
+                data-es="Laminado 4×6 ($1.00 c/u)"
+                data-en="4×6 Laminating ($1.00 each)">
+                Laminado 4×6 ($1.00 c/u)
+              </option>
+
+              <option
+                value="lam_5x7"
+                data-es="Laminado 5×7 ($1.25 c/u)"
+                data-en="5×7 Laminating ($1.25 each)">
+                Laminado 5×7 ($1.25 c/u)
+              </option>
+
+              <option
+                value="lam_carta"
+                data-es="Laminado Carta ($1.50 c/u)"
+                data-en="Letter Size Laminating ($1.50 each)">
+                Laminado Carta ($1.50 c/u)
+              </option>
+
+              <option
+                value="lam_legal"
+                data-es="Laminado Legal ($2.00 c/u)"
+                data-en="Legal Size Laminating ($2.00 each)">
+                Laminado Legal ($2.00 c/u)
+              </option>
+
+              <option
+                value="lam_11x17"
+                data-es="Laminado 11×17 ($3.50 c/u estimado)"
+                data-en="11×17 Laminating (Estimated $3.50 each)">
+                Laminado 11×17 ($3.50 c/u estimado)
+              </option>
+
+            </optgroup>
+
+
+            <!-- ESCANEO -->
+            <optgroup
+              label="Escaneo"
+              data-es-label="Escaneo"
+              data-en-label="Scanning">
+
+              <option
+                value="scan_doc"
+                data-es="Escaneo de documento ($0.50 c/u)"
+                data-en="Document Scanning ($0.50 each)">
+                Escaneo de documento ($0.50 c/u)
+              </option>
+
+              <option
+                value="scan_email"
+                data-es="Escaneo + Envío por email ($1.00 c/u)"
+                data-en="Scanning + Email Delivery ($1.00 each)">
+                Escaneo + Envío por email ($1.00 c/u)
+              </option>
+
+            </optgroup>
+
+
+            <!-- IMPRESIÓN COMERCIAL -->
+            <optgroup
+              label="Impresión Comercial y Publicidad"
+              data-es-label="Impresión Comercial y Publicidad"
+              data-en-label="Commercial Printing & Advertising">
+
+              <option
+                value="biz_cards"
+                data-es="Tarjetas de Presentación (Paquete 100) — $20.00"
+                data-en="Business Cards (Pack of 100) — $20.00">
+                Tarjetas de Presentación (Paquete 100) — $20.00
+              </option>
+
+
+            </optgroup>
+
+
+            <!-- OTROS -->
+            <optgroup
+              label="Otros Servicios"
+              data-es-label="Otros Servicios"
+              data-en-label="Other Services">
+
+            
+              <option
+                value="design"
+                data-es="Diseño Sencillo (Aprox. $17.50)"
+                data-en="Simple Design (Approx. $17.50)">
+                Diseño Sencillo (Aprox. $17.50)
+              </option>
+
+              <option
+                value="doc_pack"
+                data-es="Paquetes de Documentos (Aprox. $17.50)"
+                data-en="Document Packages (Approx. $17.50)">
+                Paquetes de Documentos (Aprox. $17.50)
+              </option>
+
+            </optgroup>
+
+          </select>
+        </label>
+
+
+        <!-- CANTIDAD -->
+        <label>
+          <span data-es="Cantidad" data-en="Quantity">
+            Cantidad
+          </span>
+
+          <input
+            id="calcQty"
+            type="number"
+            min="1"
+            value="1">
+        </label>
+
+      </div>
+
+
+      <!-- TOTAL -->
+      <div class="total">
+
+        <span
+          data-es="Total estimado"
+          data-en="Estimated Total">
+          Total estimado
+        </span>
+
+        <strong id="total">$0.20</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section id="galeria"><div class="container"><div class="head"><span class="kicker" data-es="Nuestra presentación" data-en="Our showcase"></span><h2 data-es="Mira nuestra presentación" data-en="See our showcase"></h2><p data-es="Haz clic en cualquier imagen para verla en grande." data-en="Click any image to view it larger."></p></div><div class="gallery"><div class="gallery-card big lightbox-card"><img src="banner-rs-multiservices.jpg" alt="R&S Multiservices"><span class="gallery-label" data-es="R&S Multiservices" data-en="R&S Multiservices"></span></div><div class="side"><div class="gallery-card lightbox-card"><img src="banner-rs-multiservices.jpg" alt="Copias e impresiones"><span class="gallery-label" data-es="Copias e impresiones" data-en="Copies & printing"></span></div><div class="gallery-card lightbox-card"><img src="banner-rs-multiservices.jpg" alt="Servicios profesionales"><span class="gallery-label" data-es="Servicios profesionales" data-en="Professional services"></span></div></div></div></div></section>
+<section id="faq"><div class="container"><div class="head"><span class="kicker" data-es="Preguntas frecuentes" data-en="Frequently asked questions"></span><h2 data-es="Lo que necesitas saber" data-en="What you need to know"></h2></div><div class="faq"><details><summary data-es="¿Cómo puedo hacer un pedido?" data-en="How can I place an order?"></summary><p data-es="Escríbenos por WhatsApp o completa la solicitud de cotización. Te indicaremos opciones y precio." data-en="Message us on WhatsApp or complete the quote request. We will provide options and pricing."></p></details><details><summary data-es="¿Puedo enviar mi archivo por WhatsApp?" data-en="Can I send my file through WhatsApp?"></summary><p data-es="Sí. Después de contactar con nosotros puedes enviar el archivo y los detalles de impresión por WhatsApp." data-en="Yes. After contacting us, you can send the file and printing details through WhatsApp."></p></details><details><summary data-es="¿Hacen impresión de fotos en diferentes tamaños?" data-en="Do you print photos in different sizes?"></summary><p data-es="Sí. Trabajamos tamaños populares como 4×6, 5×7, 8×10, 8.5×11 y fotos para pasaporte." data-en="Yes. We offer popular sizes such as 4×6, 5×7, 8×10, 8.5×11 and passport photos."></p></details><details><summary data-es="¿Los precios de la calculadora son definitivos?" data-en="Are calculator prices final?"></summary><p data-es="No. La calculadora es orientativa. El precio final puede variar según papel, cantidad, tipo de diseño o acabado especial." data-en="No. The calculator is an estimate. The final price may vary based on paper, quantity, design or special finishing."></p></details><details><summary data-es="¿Hacen trabajos personalizados?" data-en="Do you offer custom work?"></summary><p data-es="Sí. Escríbenos con lo que necesitas y revisaremos contigo la mejor opción." data-en="Yes. Message us with what you need and we will help you choose the best option."></p></details></div></div></section>
+<section class="cta"><div class="container"><h2 data-es="¿Listo para imprimir?" data-en="Ready to print?"></h2><p data-es="Envíanos tu idea, archivo o consulta. R&S Multiservices te ayuda a convertirla en realidad impresa." data-en="Send us your idea, file or question. R&S Multiservices helps turn it into printed reality."></p><a class="btn" style="background:#fff;color:var(--pink)" href="https://wa.me/16159192574?text=Hola%20R%26S%20Multiservices%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" data-es="💬 Escribir por WhatsApp" data-en="💬 Message us on WhatsApp"></a></div></section>
+</main>
+<footer><div class="container footer-grid"><div><h3>R&S Multiservices</h3><p data-es="Copias, Impresiones y Documentos Profesionales.<br>Tu idea, nosotros la imprimimos." data-en="Copies, Printing & Professional Documents.<br>Your idea, we print it."></p></div><div><h3 data-es="Servicios" data-en="Services"></h3><p><a href="#servicios" data-es="Fotos" data-en="Photos"></a><br><a href="#servicios" data-es="Copias e impresiones" data-en="Copies & printing"></a><br><a href="#servicios" data-es="Laminados" data-en="Lamination"></a><br><a href="#servicios" data-es="Encuadernación" data-en="Binding"></a></p></div><div><h3 data-es="Contacto" data-en="Contact"></h3><p><a href="tel:+16159192574">(615) 919-2574</a><br><a href="mailto:yuarkir@gmail.com">yuarkir@gmail.com</a><br>Smyrna, Tennessee</p></div></div><div class="container copy" data-es="© 2026 R&S Multiservices · Todos los derechos reservados." data-en="© 2026 R&S Multiservices · All rights reserved."></div></footer>
+<a class="float-wa" href="https://wa.me/16159192574" target="_blank" rel="noopener" aria-label="WhatsApp">💬 WhatsApp</a>
+<div class="modal" id="imageModal" aria-hidden="true"><button class="modal-close" id="modalClose" aria-label="Close">×</button><img id="modalImg" src="" alt="R&S Multiservices"></div><div class="toast" id="toast"></div>
+<script>
+(function(){
+ let lang=localStorage.getItem('rsLang')||'es';
+ const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+ function applyLang(){
+  document.documentElement.lang=lang;
+  $$('[data-es][data-en]').forEach(el=>{
+   const text=el.getAttribute('data-'+lang); if(text!==null) el.innerHTML=text;
+  });
+  $$('[data-placeholder-es]').forEach(el=>el.placeholder=el.getAttribute('data-placeholder-'+lang));
+  $$('option[data-es]').forEach(el=>el.textContent=el.getAttribute('data-'+lang));
+  $$('optgroup[data-es-label]').forEach(el=>el.label=el.getAttribute('data-'+lang+'-label'));
+  $('#esBtn').classList.toggle('active',lang==='es'); $('#enBtn').classList.toggle('active',lang==='en');
+  document.title=lang==='es'?'R&S Multiservices | Copias, Impresiones y Documentos':'R&S Multiservices | Copies, Printing & Documents';
+  calculate();
+ }
+ $('#esBtn').onclick=()=>{lang='es';localStorage.setItem('rsLang',lang);applyLang()}; $('#enBtn').onclick=()=>{lang='en';localStorage.setItem('rsLang',lang);applyLang()};
+ const type=$('#calcType'), qty=$('#calcQty'), total=$('#total');
+ function calculate(){const q=Math.max(1,Number(qty.value)||1);let p=0;switch(type.value){case'doc_bn_carta':p=q<=20?.20:q<=100?.17:.14;break;case'doc_col_carta':p=q<=20?.65:q<=100?.50:.40;break;case'doc_bn_legal':p=.25;break;case'doc_col_legal':p=.75;break;case'doc_bn_legal_2s':p=.30;break;case'doc_col_legal_2s':p=.90;break;case'photo_4x6':p=.75;break;case'photo_5x7':p=1.5;break;case'photo_8x10':p=3;break;case'photo_85x11':p=4;break;case'photo_pass_2':p=12;break;case'photo_pass_4':p=18;break;case'lam_4x6':p=1;break;case'lam_5x7':p=1.25;break;case'lam_carta':p=1.5;break;case'lam_legal':p=2;break;case'lam_11x17':p=3.5;break;case'scan_doc':p=.5;break;case'scan_email':p=1;break;case'biz_cards':p=20;break;case'flyers_50':p=30;break;case'flyers_100':p=45;break;case'binding':p=5.5;break;case'design':p=17.5;break;case'doc_pack':p=17.5;break}total.textContent='$'+(q*p).toFixed(2)}
+ type.addEventListener('change',calculate);qty.addEventListener('input',calculate);
+ $('#quoteForm').addEventListener('submit',function(e){e.preventDefault();const n=$('#name').value.trim(),ph=$('#phone').value.trim(),s=$('#service').selectedOptions[0].getAttribute('data-'+lang),q=$('#qty').value,d=$('#details').value.trim();const hello=lang==='es'?'Hola R&S Multiservices.':'Hello R&S Multiservices.';const labels=lang==='es'?['Nombre','Servicio','Cantidad','Teléfono','Detalles']:['Name','Service','Quantity','Phone','Details'];const msg=hello+'\n\n'+labels[0]+': '+(n||'-')+'\n'+labels[1]+': '+s+'\n'+labels[2]+': '+(q||'Por confirmar')+'\n'+labels[3]+': '+(ph||'Por confirmar')+'\n'+labels[4]+': '+(d|| (lang==='es'?'Quiero información y precio.':'I would like information and pricing.'));window.open('https://wa.me/16159192574?text='+encodeURIComponent(msg),'_blank','noopener');});
+ const modal=$('#imageModal'),mimg=$('#modalImg'); $$('.lightbox-card,.lightbox-img').forEach(el=>el.addEventListener('click',()=>{mimg.src=el.tagName==='IMG'?el.src:el.querySelector('img').src;modal.classList.add('open');modal.setAttribute('aria-hidden','false')})); function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');mimg.src=''} $('#modalClose').onclick=close;modal.addEventListener('click',e=>{if(e.target===modal)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ applyLang();
+})();
+</script>
+</body></html>
